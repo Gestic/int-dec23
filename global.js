@@ -55,7 +55,12 @@ var mod = {
                 defense: { // point to gather troops
                     color: COLOR_YELLOW,
                     secondaryColor: COLOR_YELLOW,
-                    filter: {'color': COLOR_YELLOW, 'secondaryColor': COLOR_YELLOW }
+                    filter: {'color': COLOR_YELLOW, 'secondaryColor': COLOR_YELLOW },
+                    sourceKiller: { // SK room to gaurd
+                        color: COLOR_YELLOW,
+                        secondaryColor: COLOR_RED,
+                        filter: {'color': COLOR_YELLOW, 'secondaryColor': COLOR_RED }
+                    }
                 },
                 destroy: { // destroy whats standing here
                     color: COLOR_ORANGE,

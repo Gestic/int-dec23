@@ -26,6 +26,7 @@ var mod = {
             upgrading: load("creep.action.upgrading"), 
             withdrawing: load("creep.action.withdrawing"),
             robbing:load("creep.action.robbing"),
+            sourceKiller:load("creep.action.sourceKiller"),
             reallocating:load("creep.action.reallocating")
         };
         Creep.behaviour = {
@@ -41,6 +42,7 @@ var mod = {
             ranger: load("creep.behaviour.ranger"),
             upgrader: load("creep.behaviour.upgrader"),
             warrior: load("creep.behaviour.warrior"),
+            sourceKiller: load("creep.behaviour.sourceKiller"),
             worker: load("creep.behaviour.worker")
         };
         Creep.setup = {
@@ -56,6 +58,7 @@ var mod = {
             ranger: load("creep.setup.ranger"),
             upgrader: load("creep.setup.upgrader"),
             warrior: load("creep.setup.warrior"),
+            sourceKiller: load("creep.setup.sourceKiller"),
             worker: load("creep.setup.worker")
         };
         Creep.loop = function(){

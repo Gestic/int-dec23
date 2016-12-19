@@ -1,6 +1,7 @@
 var mod = {
     extend: function(){
         Spawn.priority = [
+                Creep.setup.sourceKiller,
                 Creep.setup.miner,
                 Creep.setup.mineralMiner,
                 Creep.setup.worker,
@@ -13,6 +14,7 @@ var mod = {
                 Creep.setup.pioneer,
                 Creep.setup.privateer,
                 Creep.setup.claimer,
+                Creep.setup.sourceKiller,
                 Creep.setup.hopper];
         Spawn.prototype.loop = function(){
             if( this.spawning ) return;
@@ -55,17 +57,11 @@ var mod = {
                 return true;
             }
             var completeName;
-            var stumb = params.name;
             for (var son = 1; completeName == null || Game.creeps[completeName]; son++) {
              completeName = params.name + '-' + son;
             }
             params.name = completeName;
-            let result = this.create(params.parts, params.name, params.setup, params.destiny);
-            if( !result ){
-                params.name = stumb;
-                queue.unshift(params);
-            }
-            return result;
+            return this.create(params.parts, params.name, params.setup, params.destiny);
         };
         Spawn.prototype.create = function(body, name, type, destiny){
             if( body.length == 0 ) return false;
