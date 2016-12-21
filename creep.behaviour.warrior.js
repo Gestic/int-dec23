@@ -7,6 +7,7 @@ module.exports = {
         // Assign next Action
         let oldTargetId = creep.data.targetId;
         if( creep.action == null || creep.action.name == 'idle' || ( creep.action.name == 'guarding' && (!creep.flag || creep.flag.pos.roomName == creep.pos.roomName ) ) ) {
+            // TODO: if creep has a task try to get next action via task
             this.nextAction(creep);
         }
         if( creep.data.targetId != oldTargetId ) {

@@ -10,4 +10,17 @@ var mod = {
         _.forEach(tasks, loop);
     }
 };
+/*
+Object.defineProperty(mod, 'taskHeap', {
+    configurable: true,
+    get: function() {
+        if(_.isUndefined(Memory.tasks)) {
+            Memory.tasks = [];
+        }
+        return Memory.tasks;
+    },
+    set: function(value) {
+        Memory.tasks = value;
+    }
+});*/
 module.exports = mod;
